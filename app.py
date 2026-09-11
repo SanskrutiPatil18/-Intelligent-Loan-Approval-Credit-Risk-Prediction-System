@@ -1,7 +1,8 @@
 import streamlit as st
-import joblib, pickle, pandas as pd
+import joblib, pickle
+import pandas as pd
 
-# Load artifacts
+# Load saved artifacts
 model = joblib.load("loan_model.pkl")
 scaler = joblib.load("scaler.pkl")
 encoder = joblib.load("encoder.pkl")
@@ -10,6 +11,7 @@ with open("feature_columns.pkl", "rb") as f:
 
 st.title("🏦 Loan Approval & Credit Risk Prediction")
 
+# Input form
 age = st.number_input("Age", min_value=18, max_value=70)
 income = st.number_input("Income")
 credit_score = st.number_input("Credit Score")
