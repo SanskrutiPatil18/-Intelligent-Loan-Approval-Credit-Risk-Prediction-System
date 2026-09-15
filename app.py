@@ -4,7 +4,6 @@ import pandas as pd
 
 # Load saved artifacts
 model = joblib.load("loan_model.pkl")
-encoder = joblib.load("encoder.pkl")
 with open("feature_columns.pkl", "rb") as f:
     feature_columns = pickle.load(f)
 
