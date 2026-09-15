@@ -1,7 +1,4 @@
-app.py
-requirements.txt
-loan_model.pkl
-scaler.pkl
-encoder.pkl
-feature_columns.pkl
-
+streamlit
+pandas
+scikit-learn
+joblib
