@@ -40,7 +40,6 @@ if st.button("Predict Loan Approval"):
     categorical_cols = ["EmploymentType","Education","Dependents"]
 
 
-    final_input = pd.concat([final_input, encoded_df], axis=1)
     final_input = final_input[feature_columns]
 
     prediction = model.predict(final_input)[0]
