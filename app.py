@@ -39,8 +39,6 @@ if st.button("Predict Loan Approval"):
     numerical_cols = ["Age","Income","LoanAmount","LoanTerm","ExistingDebt","PropertyValue"]
     categorical_cols = ["EmploymentType","Education","Dependents"]
 
-    scaled = scaler.transform(df[numerical_cols])
-    encoded = encoder.transform(df[categorical_cols])
 
     final_input = pd.DataFrame(scaled, columns=numerical_cols)
     encoded_df = pd.DataFrame(encoded.toarray(), columns=encoder.get_feature_names_out(categorical_cols))
